@@ -38,7 +38,7 @@ It helps organize tasks across four columns: **Backlog**, **In Progress**, **Rev
 | **State Management** |  Redux |
 | **Data Fetching** | React Query |
 | **UI Library** |  Bootstrap |
-| **API / Backend** | json-server (mocked locally)  |
+| **API / Backend** | json-server (mocked locally) and for production used jsonbin |
 
 ---
 

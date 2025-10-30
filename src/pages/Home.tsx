@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Spinner } from "react-bootstrap";
 import { TopBar } from "../components/TopBar";
 import { KanbanColumn } from "../components/KanbanColumn";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
@@ -8,21 +8,28 @@ import { AddTaskModal } from "../components/AddTaskModal";
 import { EditTaskModal } from "../components/EditTaskModal";
 import { DeleteTaskModal } from "../components/DeleteTaskModal";
 import { ColumnKey } from "../models/ColumnType";
+import { useSelector } from "react-redux";
 
 
 export const HomeScreen: FC = () => {
     const { tasks, isLoading, moveTask } = useTasks();
     const [searchTerm, setSearchTerm] = useState("");
 
-    if (isLoading) return <div>Loading tasks...</div>;
+    const safeTasks = Array.isArray(tasks) ? tasks : [];
+    const { isFetching, isAdding, isUpdating, isDeleting } = useSelector((s: any) => s.ui);
+    const isSaving = isAdding || isUpdating || isDeleting;
+    const showLoader = isFetching || isLoading || isSaving;
 
-    const filteredTasks = tasks.filter((t: any) =>
+
+
+
+
+    const filteredTasks = safeTasks.filter((t: any) =>
         [t.title, t.description]
             .join(" ")
             .toLowerCase()
             .includes(searchTerm.toLowerCase())
     );
-
     const columns: Record<ColumnKey, { title: string; tasks: any[] }> = {
         backlog: { title: "Backlog", tasks: filteredTasks.filter((t: any) => t.column === "backlog") },
         inProgress: { title: "In Progress", tasks: filteredTasks.filter((t: any) => t.column === "inProgress") },
@@ -42,13 +49,37 @@ export const HomeScreen: FC = () => {
         moveTask({ id: movedTask.id, updates: { column: destinationColumn } });
     };
 
+
+
+
+
     return (
+
         <Container
             fluid
             className="rounded-3 w-full p-4 mt-4 d-flex flex-column"
             style={{ height: "100vh", overflow: "hidden" }}
         >
             <TopBar onSearchChange={setSearchTerm} />
+            {showLoader && (
+                <div
+                    className="position-absolute top-0 start-50 translate-middle-x d-flex align-items-center gap-2 p-2 px-3 bg-dark text-white rounded shadow"
+                    style={{ zIndex: 9999, marginTop: "10px" }}
+                >
+                    <Spinner animation="border" size="sm" />
+                    <span>
+                        {isFetching || isLoading
+                            ? "Loading tasks..."
+                            : isAdding
+                                ? "Adding..."
+                                : isUpdating
+                                    ? "Updating..."
+                                    : isDeleting
+                                        ? "Deleting..."
+                                        : ""}
+                    </span>
+                </div>
+            )}
 
             <div
                 className="container-fluid flex-grow-1"

@@ -7,6 +7,10 @@ interface UiState {
     isDeleteModalOpen: boolean;
     editingTask: any | null;
     deletingTask: any | null;
+    isFetching: boolean;
+    isAdding: boolean;
+    isUpdating: boolean;
+    isDeleting: boolean;
 
 }
 
@@ -17,6 +21,10 @@ const initialState: UiState = {
     isDeleteModalOpen: false,
     editingTask: null,
     deletingTask: null,
+    isFetching: false,
+    isAdding: false,
+    isUpdating: false,
+    isDeleting: false,
 };
 
 const uiSlice = createSlice({
@@ -47,16 +55,21 @@ const uiSlice = createSlice({
             state.isDeleteModalOpen = false;
             state.deletingTask = null;
         },
+        setFetching: (s, a: PayloadAction<boolean>) => { s.isFetching = a.payload; },
+        setAdding: (s, a: PayloadAction<boolean>) => { s.isAdding = a.payload; },
+        setUpdating: (s, a: PayloadAction<boolean>) => { s.isUpdating = a.payload; },
+        setDeleting: (s, a: PayloadAction<boolean>) => { s.isDeleting = a.payload; },
     },
 });
 
 export const {
-  openAddModal,
-  closeAddModal,
-  openEditModal,
-  closeEditModal,
-  openDeleteModal,
-  closeDeleteModal,
+    openAddModal,
+    closeAddModal,
+    openEditModal,
+    closeEditModal,
+    openDeleteModal,
+    closeDeleteModal,
+     setFetching, setAdding, setUpdating, setDeleting,
 } = uiSlice.actions;
 
 
