@@ -1,0 +1,250 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Design homepage",
+      "description": "Create hero section and layout wireframe",
+      "column": "backlog"
+    },
+    {
+      "id": "2",
+      "title": "Set up project structure",
+      "description": "Initialize repo and configure ESLint + Prettier",
+      "column": "backlog"
+    },
+    {
+      "id": "3",
+      "title": "Research UI libraries",
+      "description": "Compare Chakra UI, MUI, and Bootstrap",
+      "column": "backlog"
+    },
+    {
+      "id": "4",
+      "title": "Define API endpoints",
+      "description": "Document REST endpoints for users and tasks",
+      "column": "backlog"
+    },
+    {
+      "id": "5",
+      "title": "Write authentication tests",
+      "description": "Add Jest tests for login and signup",
+      "column": "backlog"
+    },
+    {
+      "id": "6",
+      "title": "Plan user roles",
+      "description": "Define permissions for admin and regular users",
+      "column": "backlog"
+    },
+    {
+      "id": "7",
+      "title": "Design color palette",
+      "description": "Choose primary and secondary brand colors",
+      "column": "backlog"
+    },
+    {
+      "id": "8",
+      "title": "Research deployment options",
+      "description": "Evaluate Netlify vs Vercel for hosting",
+      "column": "backlog"
+    },
+    {
+      "id": "9",
+      "title": "Create logo concept",
+      "description": "Sketch initial logo designs for feedback",
+      "column": "backlog"
+    },
+    {
+      "id": "10",
+      "title": "Define database schema",
+      "description": "Plan tables for users, tasks, and projects",
+      "column": "backlog"
+    },
+    {
+      "id": "11",
+      "title": "Implement navigation bar",
+      "description": "Add responsive navbar component",
+      "column": "review"
+    },
+    {
+      "id": "12",
+      "title": "Develop task API",
+      "description": "Implement CRUD routes for tasks",
+      "column": "backlog"
+    },
+    {
+      "id": "13",
+      "title": "Build login form",
+      "description": "Add form validation and password visibility toggle",
+      "column": "backlog"
+    },
+    {
+      "id": "14",
+      "title": "Integrate Redux Toolkit",
+      "description": "Set up store and slices for UI and tasks",
+      "column": "inProgress"
+    },
+    {
+      "id": "15",
+      "title": "Create user profile page",
+      "description": "Display user info and editable fields",
+      "column": "inProgress"
+    },
+    {
+      "id": "16",
+      "title": "Style buttons and modals",
+      "description": "Add consistent button and modal styling",
+      "column": "inProgress"
+    },
+    {
+      "id": "17",
+      "title": "Implement dark mode",
+      "description": "Allow theme toggle and persist in localStorage",
+      "column": "inProgress"
+    },
+    {
+      "id": "18",
+      "title": "Configure API error handling",
+      "description": "Add toast notifications for failed requests",
+      "column": "inProgress"
+    },
+    {
+      "id": "19",
+      "title": "Add drag-and-drop",
+      "description": "Integrate react-beautiful-dnd for tasks",
+      "column": "backlog"
+    },
+    {
+      "id": "20",
+      "title": "Optimize performance",
+      "description": "Use React.memo and lazy loading where needed",
+      "column": "inProgress"
+    },
+    {
+      "id": "21",
+      "title": "Code review for UI components",
+      "description": "Ensure components follow style guide",
+      "column": "review"
+    },
+    {
+      "id": "22",
+      "title": "Validate form inputs",
+      "description": "Ensure proper validation and error messages",
+      "column": "review"
+    },
+    {
+      "id": "23",
+      "title": "Check mobile responsiveness",
+      "description": "Test UI on different screen sizes",
+      "column": "review"
+    },
+    {
+      "id": "24",
+      "title": "Review task management logic",
+      "description": "Ensure tasks move correctly between columns",
+      "column": "review"
+    },
+    {
+      "id": "25",
+      "title": "Check API security",
+      "description": "Review JWT handling and route protection",
+      "column": "review"
+    },
+    {
+      "id": "26",
+      "title": "Review Redux selectors",
+      "description": "Ensure selectors are memoized and efficient",
+      "column": "review"
+    },
+    {
+      "id": "27",
+      "title": "Run accessibility audit",
+      "description": "Use Lighthouse to check accessibility score",
+      "column": "review"
+    },
+    {
+      "id": "28",
+      "title": "Check animations",
+      "description": "Ensure drag/drop and modal animations are smooth",
+      "column": "review"
+    },
+    {
+      "id": "29",
+      "title": "Cross-browser testing",
+      "description": "Test app on Chrome, Firefox, and Safari",
+      "column": "review"
+    },
+    {
+      "id": "30",
+      "title": "Finalize landing page design",
+      "description": "Confirm alignment and spacing with mockup",
+      "column": "review"
+    },
+    {
+      "id": "31",
+      "title": "Deploy to staging",
+      "description": "Push latest build to staging environment",
+      "column": "review"
+    },
+    {
+      "id": "33",
+      "title": "Add favicon and meta tags",
+      "description": "Improve SEO and branding",
+      "column": "inProgress"
+    },
+    {
+      "id": "34",
+      "title": "Merge feature branches",
+      "description": "Consolidate all feature work into main branch",
+      "column": "done"
+    },
+    {
+      "id": "35",
+      "title": "Set up CI/CD pipeline",
+      "description": "Automate testing and deployment process",
+      "column": "done"
+    },
+    {
+      "id": "36",
+      "title": "Publish changelog",
+      "description": "List new features and bug fixes",
+      "column": "done"
+    },
+    {
+      "id": "37",
+      "title": "Tag release v1.0.0",
+      "description": "Mark first stable version release",
+      "column": "done"
+    },
+    {
+      "id": "38",
+      "title": "Update README",
+      "description": "Add setup instructions and screenshots",
+      "column": "done"
+    },
+    {
+      "id": "39",
+      "title": "Notify stakeholders",
+      "description": "Send release notes to the team",
+      "column": "done"
+    },
+    {
+      "id": "8dfe",
+      "title": "new one",
+      "description": "hello",
+      "column": "backlog"
+    },
+    {
+      "id": "0f20",
+      "title": "new task",
+      "description": "sdfsdfs",
+      "column": "inProgress"
+    },
+    {
+      "id": "63ea",
+      "title": "new tas",
+      "description": "sdfsdfs",
+      "column": "review"
+    }
+  ]
+}
