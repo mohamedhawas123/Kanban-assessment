@@ -47,8 +47,9 @@ It helps organize tasks across four columns: **Backlog**, **In Progress**, **Rev
 ## ⚙️ Installation & Setup
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/kanban-dashboard.git
-cd kanban-dashboard
+
+git clone https://github.com/mohamedhawas123/Kanban-assessment.git
+cd Kanban-assessment
 
 npm install
 
