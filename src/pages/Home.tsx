@@ -58,7 +58,7 @@ export const HomeScreen: FC = () => {
         <Container
             fluid
             className="rounded-3 w-full p-4 mt-4 d-flex flex-column"
-            style={{ height: "100vh", overflow: "hidden" }}
+            style={{ height: "100vh",  }}
         >
             <TopBar onSearchChange={setSearchTerm} />
             {showLoader && (
@@ -83,7 +83,7 @@ export const HomeScreen: FC = () => {
 
             <div
                 className="container-fluid flex-grow-1"
-                style={{ height: "calc(100vh - 120px)", overflow: "hidden" }}
+                style={{ height: "calc(100vh - 120px)",  }}
             >
                 <DragDropContext onDragEnd={onDragEnd}>
                     <div className="row h-100 g-4 p-3">
